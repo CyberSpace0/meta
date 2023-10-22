@@ -6,20 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color: #808080">
+<body>
 <?php
 $user = 'root';
-$host = 'db_mysql';
-$pass = 'root';
-$database = 'KSA';
+$host = 'localhost';
+$pass = '123456789';
+$database = 'ksa';
 $connect = mysqli_connect($host,$user,$pass,$database);
 
 
 if(isset($_FILES['file'])){
     $x = $_FILES['file'];
     $name = $x['name'];
-    $x = explode('.',$name);
-    $name = $x[0];
     $name = urldecode($name);
     $name = strtolower($name);
     $block = ['union','order'];
